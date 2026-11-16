@@ -44,6 +44,6 @@ describe("twin plan", () => {
     const alts = alternatives(base);
     const rec = alts.filter((a) => a.recommended);
     expect(rec).toHaveLength(1);
-    expect(rec[0].commitmentRatio).toBeLessThanOrEqual(0.33);
+    expect(rec[0]!.commitmentRatio).toBeLessThanOrEqual(0.33);
   });
 });

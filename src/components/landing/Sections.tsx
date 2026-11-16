@@ -71,7 +71,7 @@ export function Journey() {
         <SectionHead eyebrow={t("home.journey.eyebrow")} title={t("home.journey.title")} />
         <ol className="relative grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {steps.map((s, i) => {
-            const Icon = STEP_ICONS[i];
+            const Icon = STEP_ICONS[i] ?? Target;
             return (
               <Reveal key={i} delay={(i % 3) * 0.08}>
                 <li className="group h-full rounded-2xl border border-border bg-background/60 p-5 transition hover:-translate-y-1 hover:border-primary/40">
