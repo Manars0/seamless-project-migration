@@ -11,6 +11,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 import { I18nextProvider } from "react-i18next";
 import i18n, { applyLang, readSavedLang } from "@/lib/i18n";
+import { applyTheme, readSavedTheme } from "@/lib/theme";
 import { supabase } from "@/integrations/supabase/client";
 import { Toaster } from "@/components/ui/sonner";
 
@@ -102,7 +103,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Readex+Pro:wght@500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Readex+Pro:wght@500;600;700&display=swap",
       },
     ],
   }),
@@ -114,7 +115,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="ar" dir="rtl" suppressHydrationWarning>
+    <html lang="ar" dir="rtl" className="dark" suppressHydrationWarning>
       <head>
         <HeadContent />
       </head>
@@ -131,6 +132,7 @@ function RootComponent() {
   const router = useRouter();
 
   useEffect(() => {
+    applyTheme(readSavedTheme());
     const lang = readSavedLang();
     applyLang(lang);
     if (i18n.language !== lang) void i18n.changeLanguage(lang);

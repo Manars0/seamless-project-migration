@@ -529,5 +529,185 @@
   "aiError": "The advisor couldn't reply. Please try again.",
   "thisMonth": "This month",
   "exportCsv": "Export CSV"
+ },
+ "home": {
+  "nav": {
+   "platform": "Platform",
+   "how": "How it works",
+   "why": "Why us",
+   "insights": "Insights",
+   "login": "Login",
+   "start": "Get started",
+   "theme": "Toggle theme"
+  },
+  "hero": {
+   "badge": "Your digital financial twin",
+   "title1": "Know when",
+   "title2": "you'll own your home",
+   "title3": "and how to get there.",
+   "statement": "FinTwin AI doesn't just tell you if you can afford your home today — it shows you how and when you can own it, suggests the right alternatives, and builds a smart savings plan that stays with you until you reach your goal.",
+   "cta1": "Try the financial twin",
+   "cta2": "See how it works",
+   "chip1": "Safety margin",
+   "chip2": "Shorter timeline",
+   "chip3": "Proactive alert"
+  },
+  "twin": {
+   "title": "Your financial twin — live preview",
+   "live": "Live",
+   "income": "Monthly income",
+   "expenses": "Monthly expenses",
+   "savings": "Current savings",
+   "goal": "Goal amount",
+   "months": "Target (months)",
+   "boost": "Extra monthly saving",
+   "monthly": "Required monthly saving",
+   "finish": "Projected completion",
+   "progress": "Progress",
+   "score": "Financial safety score",
+   "current": "Current path",
+   "smart": "Smart plan",
+   "never": "Not reachable yet",
+   "monthsUnit": "mo",
+   "how": "How we calculated this",
+   "howBody": "Surplus = income − expenses. We first reserve an emergency fund of 3 months of expenses, then direct up to 70% of the surplus to your goal. Time = remaining amount ÷ monthly saving.",
+   "adviceBoost": "Saving {{boost}} more per month gets you there {{months}} months sooner.",
+   "adviceOnTime": "You're on track: save {{monthly}} a month to arrive on time.",
+   "adviceLate": "At this pace you need {{months}} months. Try saving more or a longer target.",
+   "adviceNone": "There's no surplus right now. Start by trimming expenses to open a path to your goal.",
+   "twinName": "Your twin"
+  },
+  "compare": {
+   "eyebrow": "Why FinTwin",
+   "title": "Not just a budgeting app",
+   "sub": "Traditional tools look backward. Your financial twin looks ahead.",
+   "old": "Traditional approach",
+   "new": "FinTwin AI",
+   "rows": [
+    {
+     "old": "Only records past spending",
+     "new": "Simulates your future decisions"
+    },
+    {
+     "old": "Static reports that don't respond",
+     "new": "A living twin that talks with you"
+    },
+    {
+     "old": "Generic one-size-fits-all tips",
+     "new": "Recommendations from your real situation"
+    },
+    {
+     "old": "Answers \"Where did my money go?\"",
+     "new": "Answers \"What if I make this decision?\""
+    },
+    {
+     "old": "Decides on today's buying power",
+     "new": "Decides on the impact on your future"
+    },
+    {
+     "old": "Doesn't compare alternatives",
+     "new": "An alternatives advisor that compares and suggests"
+    },
+    {
+     "old": "Doesn't turn goals into a plan",
+     "new": "Smart savings plan + auto-saving + alerts"
+    }
+   ]
+  },
+  "journey": {
+   "eyebrow": "Customer journey",
+   "title": "From sign-in to goal in 9 steps",
+   "steps": [
+    {
+     "t": "Login with Nafath",
+     "d": "Secure sign-in with your national ID"
+    },
+    {
+     "t": "Connect via Open Banking",
+     "d": "We read income and spending with your consent"
+    },
+    {
+     "t": "Set your goal",
+     "d": "e.g. a home worth 900,000 SAR"
+    },
+    {
+     "t": "Financial alternatives",
+     "d": "We compare options and suggest the best fit"
+    },
+    {
+     "t": "Smart savings plan",
+     "d": "Your emergency fund comes first"
+    },
+    {
+     "t": "Auto-saving",
+     "d": "Monthly transfer with your explicit consent"
+    },
+    {
+     "t": "Accelerate the goal",
+     "d": "We find surplus and shorten the timeline"
+    },
+    {
+     "t": "Proactive alerts",
+     "d": "Before your goal is affected"
+    },
+    {
+     "t": "Progress tracking",
+     "d": "Completion and time remaining"
+    }
+   ]
+  },
+  "alts": {
+   "eyebrow": "Alternatives advisor",
+   "title": "Three paths to a 900,000 SAR home",
+   "sub": "Calculated from the numbers you entered above.",
+   "financeNow": "Buy now with financing",
+   "delaySave": "Delay & save more",
+   "cheaper": "A lower-priced home",
+   "financeNowD": "10% down, 25-year financing",
+   "delaySaveD": "30% down for a lighter installment",
+   "cheaperD": "A home at ~75% of the price, 10% down",
+   "recommended": "Recommended",
+   "price": "Price",
+   "down": "Down payment",
+   "payment": "Monthly installment",
+   "ratio": "Commitments / income",
+   "liquidity": "Liquidity after purchase",
+   "start": "Time to start",
+   "now": "Now",
+   "assume": "Illustrative assumptions: 5% annual profit rate, 25 years, 33% safe commitment limit."
+  },
+  "insights": {
+   "eyebrow": "Market insights",
+   "title": "More financing options, more need to see the impact",
+   "sub": "As financing and BNPL grow, people need a tool that shows a decision's impact before they make it.",
+   "s1v": "3.1",
+   "s1u": "trillion SAR",
+   "s1": "Total loans in Saudi Arabia, 2025",
+   "s1n": "About 27.3 billion SAR non-performing (≈0.88%, approximate)",
+   "s2v": "124.6",
+   "s2u": "%",
+   "s2": "Growth in Tamara stage-3 balances in six months",
+   "s2n": "From 43.1M SAR (end 2025) to 96.8M SAR (30 Jun 2026)",
+   "s3v": "302.9",
+   "s3u": "million SAR",
+   "s3": "Tabby loans overdue 90+ days",
+   "s3n": "Q1 2026",
+   "s4v": "18.6",
+   "s4u": "billion SAR",
+   "s4": "Saudi BNPL market, 2025",
+   "s4n": "Mordor Intelligence est.; online 60.74%, fashion & personal care 37.18%",
+   "note": "Figures are based on project-provided data and sources (e.g., Mordor Intelligence) and must be verified against original disclosures before publication. Measurement periods and definitions of default differ; these figures should not be summed or treated as individual-level default indicators."
+  },
+  "cta": {
+   "title": "Start building your financial twin today",
+   "sub": "See the impact of your decisions before you make them.",
+   "btn": "Get started"
+  },
+  "footer": {
+   "credit": "Prepared by Maha Bader Alotaibi — Maha.bp@outlook.sa",
+   "disclaimer": "FinTwin AI provides educational simulations and is not a licensed financial advice service.",
+   "demo": "Integrations with Nafath, Open Banking and automatic transfers require official approvals and are not active yet."
+  },
+  "demo": "Demo"
  }
 }

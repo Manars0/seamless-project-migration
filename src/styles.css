@@ -66,9 +66,10 @@
   --color-success-foreground: var(--success-foreground);
   --color-warning: var(--warning);
   --color-warning-foreground: var(--warning-foreground);
-  --font-sans: "IBM Plex Sans Arabic", "IBM Plex Sans", system-ui, sans-serif;
+  --font-sans: "Inter", "IBM Plex Sans Arabic", system-ui, sans-serif;
   --font-display: "Readex Pro", "IBM Plex Sans Arabic", system-ui, sans-serif;
   --color-sidebar: var(--sidebar);
+  --color-violet: var(--chart-5);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
   --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
@@ -124,6 +125,41 @@
   --shadow-glow: 0 12px 32px -12px oklch(0.55 0.19 258 / 0.45);
 }
 
+.dark {
+  --background: oklch(0.145 0.018 265);
+  --foreground: oklch(0.96 0.006 260);
+  --card: oklch(0.185 0.02 265);
+  --card-foreground: oklch(0.96 0.006 260);
+  --popover: oklch(0.19 0.02 265);
+  --popover-foreground: oklch(0.96 0.006 260);
+  --primary: oklch(0.66 0.19 262);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.23 0.02 265);
+  --secondary-foreground: oklch(0.93 0.01 260);
+  --muted: oklch(0.22 0.018 265);
+  --muted-foreground: oklch(0.7 0.02 260);
+  --accent: oklch(0.26 0.04 165);
+  --accent-foreground: oklch(0.85 0.12 165);
+  --destructive: oklch(0.64 0.2 20);
+  --success: oklch(0.72 0.16 162);
+  --warning: oklch(0.8 0.15 75);
+  --border: oklch(1 0 0 / 0.08);
+  --input: oklch(1 0 0 / 0.12);
+  --ring: oklch(0.66 0.19 262);
+  --chart-1: oklch(0.66 0.19 262);
+  --chart-2: oklch(0.72 0.16 162);
+  --chart-3: oklch(0.8 0.15 75);
+  --chart-4: oklch(0.66 0.2 20);
+  --chart-5: oklch(0.65 0.2 295);
+  --sidebar: oklch(0.12 0.018 265);
+  --sidebar-border: oklch(1 0 0 / 0.07);
+  --sidebar-accent: oklch(0.2 0.025 265);
+  --gradient-primary: linear-gradient(135deg, oklch(0.62 0.2 262), oklch(0.6 0.22 295));
+  --gradient-ink: linear-gradient(160deg, oklch(0.13 0.02 265), oklch(0.16 0.03 270));
+  --shadow-card: 0 1px 0 oklch(1 0 0 / 0.04) inset, 0 12px 32px -16px oklch(0 0 0 / 0.6);
+  --shadow-glow: 0 16px 48px -16px oklch(0.62 0.2 262 / 0.55);
+}
+
 @layer base {
   * {
     border-color: var(--color-border);
@@ -145,3 +181,13 @@
 @utility shadow-card { box-shadow: var(--shadow-card); }
 @utility shadow-glow { box-shadow: var(--shadow-glow); }
 @utility num { direction: ltr; unicode-bidi: isolate; font-variant-numeric: tabular-nums; }
+
+@utility bg-gradient-violet { background-image: var(--gradient-primary); }
+@utility text-gradient { background-image: var(--gradient-primary); background-clip: text; -webkit-background-clip: text; color: transparent; }
+@utility glass { background-color: color-mix(in oklab, var(--background) 70%, transparent); backdrop-filter: blur(16px) saturate(1.4); }
+@utility hero-glow { background: radial-gradient(60% 50% at 50% 0%, color-mix(in oklab, var(--primary) 35%, transparent), transparent 70%), radial-gradient(40% 40% at 80% 30%, color-mix(in oklab, var(--chart-5) 25%, transparent), transparent 70%); }
+@utility grid-lines { background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px); background-size: 48px 48px; mask-image: radial-gradient(ellipse at 50% 0%, black 30%, transparent 75%); }
+html[lang="ar"] body { font-family: "IBM Plex Sans Arabic", "Inter", system-ui, sans-serif; }
+@keyframes glow-drift { 0%,100% { transform: translate3d(0,0,0) scale(1); } 50% { transform: translate3d(0,-20px,0) scale(1.05); } }
+.animate-glow { animation: glow-drift 12s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .animate-glow { animation: none; } }
