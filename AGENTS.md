@@ -28,3 +28,10 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## FinTwin AI (migrated from a Replit export)
+- User data lives in Cloud tables (transactions, goals, budgets, investments, debts, profiles) with owner-only RLS; the browser reads/writes them directly via `src/lib/data.ts`. Why: simple CRUD needs no server hop and RLS enforces isolation.
+- Score, reports, simulator, recommendations and notifications are pure functions in `src/lib/finance.ts` computed from that data (tested in `finance.test.ts`). Why: replaces the old Express engine with no backend state.
+- The AI advisor is the only server code: `src/lib/advisor.functions.ts` (requireSupabaseAuth) loads the user's data and calls the AI Gateway. Why: keeps the key server-side and grounds answers in real numbers.
+- UI text comes from `src/locales/{ar,en}.json` via i18next; Arabic/RTL is the default and `<html dir>` is switched at runtime. Use logical classes (ms/me, start/end), never per-component RTL flips.
+- Signed-in pages live under `src/routes/_authenticated/` (client-only gate redirecting to /login).

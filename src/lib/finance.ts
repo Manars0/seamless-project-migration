@@ -238,7 +238,7 @@ export function simulate(type: ScenarioType, amount: number, o: Overview, months
     savings += income - expenses - pay - extraInvest;
     rows.push({ month: m, savings: Math.round(savings), debt: Math.round(debt), investments: Math.round(investments), netWorth: Math.round(savings + investments - debt) });
   }
-  const last = rows[rows.length - 1];
+  const last = rows[rows.length - 1]!;
   const monthlyNet = income - expenses - debtPay - extraDebt - extraInvest;
   const risk: "low" | "medium" | "high" =
     monthlyNet < 0 || last.savings < 0 ? "high" : income > 0 && monthlyNet / income < 0.1 ? "medium" : "low";

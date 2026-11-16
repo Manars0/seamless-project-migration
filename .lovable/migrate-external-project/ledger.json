@@ -1,10 +1,58 @@
 [
- {"capability":"code (12 pages, layouts, bilingual AR/EN)","source":"React+Vite+wouter","outcome":"migrate","status":"in_progress","next_action":"Rebuild on TanStack Start"},
- {"capability":"schema (profiles, transactions, goals, budgets, investments, debts)","source":"Supabase SQL in replit.md","outcome":"migrate","status":"in_progress","next_action":"Create in Lovable Cloud with RLS"},
- {"capability":"records","source":"Supabase","outcome":"migrate","status":"pending","next_action":"Request CSV exports (source app used mock data)"},
- {"capability":"auth identities","source":"Supabase auth","outcome":"migrate","status":"pending","next_action":"Request users export; source sign-up/sign-in was simulated"},
- {"capability":"authorization","source":"RLS per user_id","outcome":"migrate","status":"in_progress","next_action":"Owner-only RLS"},
- {"capability":"AI advisor, score, simulator, reports, notifications","source":"Express api-server (rule-based)","outcome":"migrate","status":"in_progress","next_action":"Server functions + Lovable AI for chat"},
- {"capability":"secrets","source":"VITE_SUPABASE_*, DATABASE_URL, REPL_*","outcome":"replaced","status":"done","next_action":"None; replaced by Cloud / platform metadata"},
- {"capability":"verification","source":"-","outcome":"migrate","status":"pending","next_action":"Sign up, CRUD, AI chat"}
+ {
+  "capability": "code (12 pages, layouts, bilingual AR/EN)",
+  "source": "React+Vite+wouter",
+  "outcome": "migrate",
+  "status": "verified",
+  "next_action": "None"
+ },
+ {
+  "capability": "schema (profiles, transactions, goals, budgets, investments, debts)",
+  "source": "Supabase SQL in replit.md",
+  "outcome": "migrate",
+  "status": "verified",
+  "next_action": "None"
+ },
+ {
+  "capability": "records",
+  "source": "Supabase",
+  "outcome": "migrate",
+  "status": "pending",
+  "next_action": "Source app showed only mock data; request Supabase CSV exports if real records exist"
+ },
+ {
+  "capability": "auth identities",
+  "source": "Supabase auth",
+  "outcome": "migrate",
+  "status": "pending",
+  "next_action": "Request Supabase users export if real users exist; they reset via Forgot password"
+ },
+ {
+  "capability": "authorization",
+  "source": "RLS per user_id",
+  "outcome": "migrate",
+  "status": "verified",
+  "next_action": "None"
+ },
+ {
+  "capability": "AI advisor, score, simulator, reports, notifications",
+  "source": "Express api-server (rule-based)",
+  "outcome": "migrate",
+  "status": "verified",
+  "next_action": "None; chat uses Lovable AI, other features computed in-app"
+ },
+ {
+  "capability": "secrets",
+  "source": "VITE_SUPABASE_*, DATABASE_URL, REPL_*",
+  "outcome": "replaced",
+  "status": "done",
+  "next_action": "None; replaced by Cloud / platform metadata"
+ },
+ {
+  "capability": "verification",
+  "source": "-",
+  "outcome": "migrate",
+  "status": "verified",
+  "next_action": "Sign-up, sign-in, CRUD, dashboard, AI chat checked; test account removed"
+ }
 ]

@@ -36,6 +36,6 @@ describe("simulator", () => {
   it("adds a salary increase to every month's savings", () => {
     const flat = simulate("salary_increase", 0, base);
     const raise = simulate("salary_increase", 1000, base);
-    expect(raise.projections[11].savings - flat.projections[11].savings).toBe(12000);
+    expect(raise.projections[11]!.savings - flat.projections[11]!.savings).toBe(12000);
   });
 });

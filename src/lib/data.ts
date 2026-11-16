@@ -37,7 +37,7 @@ export function useAllData() {
 export function useSaveRow(table: TableName) {
   const qc = useQueryClient();
   return useMutation({
-    mutationFn: async ({ id, values }: { id?: string; values: Record<string, unknown> }) => {
+    mutationFn: async ({ id, values }: { id?: string | undefined; values: Record<string, unknown> }) => {
       if (id) {
         const { error } = await supabase.from(table as any).update(values as any).eq("id", id);
         if (error) throw error;

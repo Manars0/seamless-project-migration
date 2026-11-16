@@ -494,7 +494,13 @@
   "none": "No transactions yet. Add your first income or expense.",
   "income": "Income",
   "expense": "Expense",
-  "deleteConfirm": "Delete this transaction?"
+  "deleteConfirm": "Delete this transaction?",
+  "cats": {
+   "salary": "Salary",
+   "business": "Business",
+   "freelance": "Freelance",
+   "gift": "Gift"
+  }
  },
  "landing": {
   "tagline": "Your AI-powered financial twin",
