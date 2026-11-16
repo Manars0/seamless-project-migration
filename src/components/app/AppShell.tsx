@@ -81,7 +81,7 @@ export function AppShell({ children }: { children: ReactNode }) {
     <div className="flex h-screen w-full overflow-hidden bg-background">
       <aside className="hidden w-64 shrink-0 md:block"><SideContent /></aside>
       <Sheet open={open} onOpenChange={setOpen}>
-        <SheetContent side={i18n.language === "ar" ? "right" : "left"} className="w-72 border-0 p-0">
+        <SheetContent side={i18n.language === "ar" ? "right" : "left"} className="w-72 border-0 p-0 [&>button]:hidden">
           <SheetTitle className="sr-only">Menu</SheetTitle>
           <SideContent onNav={() => setOpen(false)} />
         </SheetContent>
